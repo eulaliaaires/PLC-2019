@@ -1,3 +1,5 @@
+--AULA03 26/02/2019--
+
 terceiro :: (a, b, c) -> c
 terceiro (x, y, z) = z
 
