@@ -64,3 +64,9 @@ filtro f (x:xs)
 
 cAZ :: Char -> Bool
 cAZ ch = (ch >= 'A') && (ch <= 'Z')
+
+-- constroi uma lista com todos os valores de "x" que vem da lista "l", mas apenas os valores que atendem a condição "f"
+filtroCL f l = [ x | x <- l, f x]
+
+-- na expressao [ f x | x <- l] os valores da lista final serao alterados pela funçao f (todo "f" que é escrito a direita do pipe é uma expressao que altera o valor final de x)
+--na expressao [x | x <- l, f x] os valores da lista final NAO serao alterados pela funçao "f" mas deverao atender essa condicao para estarem na lista final (todo "f" que é escrito a esquerda do pipe é uma expressao de condiçao para valor final de x)
