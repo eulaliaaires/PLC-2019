@@ -29,6 +29,14 @@ public class Thread1 extends Thread{
 		for(int b = 0; b < store.length; b++) {
 			store[b].start();
 		}
+		for(int c = 0; c < store.length; c++) {
+			try {
+				store[c].join();
+			}
+			catch(InterruptedException a) {
+				
+			}
+		}
 		
 		
 	}
